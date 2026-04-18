@@ -1,2 +1,2 @@
 # TRY CATCH
-[Link]("file:///D:/SMIT%20Course/JS%20Practice/index.html")
+[Link]("https://github.com/Ahsan24688/JS-Practics/blob/main/index.html")
