@@ -1,2 +1,2 @@
 # Fetching Data
-[Page link](./index.html)
+[Page link](https://ahsan24688.github.io/JS-Practics/)
