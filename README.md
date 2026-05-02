@@ -1,2 +1,2 @@
 # Contains all the Files
-[GO to Link](https://ahsan24688.github.io/JS-Practics/Hub/index.html)
+[GO to Link](https://ahsan24688.github.io/Hub/index.html)
