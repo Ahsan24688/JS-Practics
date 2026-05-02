@@ -7,6 +7,7 @@ let Countryinp = document.querySelector("#Country_name");
 let PCinp = document.querySelector("#PC_name");
 let btn = document.querySelector("#btn");
 let btn2 = document.querySelector("#btn2");
+let dataDiv = document.querySelector("#data");
 
 btn.addEventListener("click", async () => {
     try {
@@ -47,11 +48,22 @@ getdata().then(() => {
 
 btn2.addEventListener("click",  () => {
     data.map(data => {
-        let div = document.createElement('div');
+        let newdiv = document.createElement('div');
         let p = document.createElement('p');
         p.innerHTML = `<b>City: </b>` + data.City + '<br>' + `<b>Country: </b>` + data.Country + '<br>' + `<b>Postcode: </b>` + data.postcode;
-        div.append(p);
-        document.body.append(div);
+        newdiv.append(p);
+        dataDiv.append(newdiv);
+
+        newdiv.style.backgroundColor = "#a7b357";
+        newdiv.style.margin = "10px";
+        newdiv.style.padding = "10px";
+        newdiv.style.border = "1px solid #000000";
+        newdiv.style.borderRadius = "10px";
+        
+
+
+    
+
     }
     )
 })
