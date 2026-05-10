@@ -7,11 +7,13 @@ let lname = document.querySelector("#lname");
 let btn = document.querySelector("#add");
 let updatebtn = document.querySelector("#update");
 let showdata = () => {
-    let container = document.querySelector("#all_data");
-    container.innerHTML = "";
+    let all_data = document.querySelector("#all_data"); 
+    all_data.innerHTML = "";
     data.map(cities => {
+        let container= document.createElement("div");
         let div = document.createElement("div");
         let p = document.createElement("p");
+        p.className = 'data';
         p.innerText = `First Name: ${cities.FirstName}
         Last Name: ${cities.LastName}`;
         p.innerHTML += `
@@ -19,6 +21,7 @@ let showdata = () => {
         <button onclick="deletedata('${cities.uid}')">Delete</button>`;
         div.appendChild(p);
         container.appendChild(div);
+        all_data.appendChild(container);
 
         p.querySelector(".Edit")
             .addEventListener("click", () => editdata(cities.uid));
@@ -67,6 +70,8 @@ window.deletedata = async (uid) => {
     try {
         await deleteDoc(doc(db, "cities", uid));
         fetchdata().then(() => showdata());
+        fname.value = "";
+        lname.value = "";
     } catch (error) {
         console.error("Error deleting document: ", error);
     }
@@ -84,14 +89,14 @@ let editdata = async (id) => {
 }
 
 updatebtn.addEventListener("click", async () => {
-    fname = document.querySelector("#fname").value;
-    lname = document.querySelector("#lname").value;
+    let updatefname = fname.value;
+    let updatelname = lname.value;
 
     if (editid) {
         try {
             await setDoc(doc(db, "cities", editid), {
-                FirstName: fname,
-                LastName: lname
+                FirstName: updatefname,
+                LastName: updatelname
             });
         } catch (error) {
             console.error("Error updating document: ", error);
@@ -100,7 +105,9 @@ updatebtn.addEventListener("click", async () => {
     fetchdata().then(() => showdata());
     if (editid) {
         editid = null;
-        alert ("Data Updated Successfully");
+        alert("Data Updated Successfully");
     }
+    fname.value = "";
+    lname.value = "";
 })
 
