@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Quiz App</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="aside_bar">
+            <h1 class="aside_title">Quiz App</h1>
+            <button id="start" class="aside_btn">Start Quiz</button>
+            <button id="result" class="aside_btn"> Result </button>
+        </div>
+        <div class="quiz_container">
+            <div  id="greet" class="greet animate__animated animate__zoomIn">
+                <h2>Welcome to the Quiz App!</h2>
+                <p>To Start the QUIZ Please Click the Button on the Top Left corner of the Screen</p>
+            </div>
+            <div  id="header" class="header animate__animated animate__zoomIn">
+                <h2 id="question"> Question Text Here </h2>
+                <ul>
+                    <li>
+                        <input type="radio" name="answer" id="option1">
+                        <label for="option1" id="L_opt1">Option 1</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="option2">
+                        <label for="option2" id="L_opt2">Option 2</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="option3">
+                        <label for="option3" id="L_opt3">Option 3</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="answer" id="option4">
+                        <label for="option4" id="L_opt4">Option 4</label>
+                    </li>
+                </ul>
+                <button id="next">Next</button>
+            </div>
+            <div id="result_container" class="animate__animated animate__zoomIn">
+                <h2> Quiz Performance</h2>
+                <div class="dashboard">
+                    <div id="accuracy"> accuracy</div>
+                    <div id="correct"> Correct </div>
+                    <div id="wrong"> Wrong </div>
+                    <div id="attempt"> Quiz attempt </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="quiz app.js"></script>
+</body>
+
+</html>

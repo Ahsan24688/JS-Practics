@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    display: flex;
+    
+}
+.aside_bar{
+    display: flex;
+    flex-direction: column;
+    background-color: #343a40;
+    width: 280px;
+    height: 90vh;
+    margin: 8px;
+    padding: 6px;
+    border-radius: 15px;
+}
+.aside_title{
+    color: white;
+    text-align: center;
+    margin: 20px 0;
+}
+.aside_btn{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.quiz_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    width: 100%;
+    margin: 8px;
+    padding: 6px;
+    border-radius: 15px;
+
+}
+#greet{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+}
+#header{
+    width: 500px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+}
+#next{
+    margin-left: auto;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#result_container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+}
+.dashboard{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    background-color: #2d69a6;
+    border-radius: 15px;
+    padding: 20px;
+}
+#accuracy, #correct, #wrong, #attempt{
+    font-size: 18px;
+    margin: 15px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction: column;
+    }
+    .aside_bar{
+        width: auto;
+        height: auto;
+    }
+    .quiz_container{
+        width: auto;
+        height: auto;
+    }
+    #greet, #header, #result_container{
+        width: auto;
+    }
+    #result_container{
+        width: auto;
+    }
+    .dashboard{
+        flex-direction: column;
+    }
+   
+}
